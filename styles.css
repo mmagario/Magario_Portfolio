@@ -8,8 +8,7 @@ body {
 	margin: 0 auto;
 	color: #fff;
     background-color: #1b1b1b;
-	width: 1280px;
-	/* background-image: url("assets/Grunge.jpg"); */
+	width: 100%;
  	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -21,9 +20,8 @@ header {
 	color: #d0dde3;
 	font-size: x-large;
 	text-align: center;
-	width: 1280px;
+	width: 100%;
 	margin: 0 auto;
-	margin-top: 20px;
     background-color: #0b0b0bad;
     border-radius: 5px;
     box-shadow: 5px 5px 5px black;
@@ -164,12 +162,9 @@ a {
 footer {
 	padding: 5px;
 	text-align: center;
-	width: 1280px;
+	width: 25%;
 	margin: 0 auto;
 	margin-top: 20px;
-    background-color: #0b0b0bad;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px black;
 }
 
 body {
