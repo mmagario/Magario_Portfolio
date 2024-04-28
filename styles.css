@@ -194,6 +194,12 @@ iframe {
     margin: 0 auto;
 	box-shadow: 5px 5px 5px black;
 }
+
+#myWork {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
  
 @keyframes fadeInAnimation {
     0% {
