@@ -25,6 +25,7 @@ header {
     background-color: #0b0b0bad;
     border-radius: 5px;
     box-shadow: 5px 5px 5px black;
+	margin: 0 auto;
 }
 
 main {
@@ -209,6 +210,7 @@ img {
 	margin: 50px;
 	filter: drop-shadow(5px 5px 5px #000);
     -webkit-filter: drop-shadow(5px 5px 5px #000);
+	margin: 0 auto;
 }
 
 iframe {
