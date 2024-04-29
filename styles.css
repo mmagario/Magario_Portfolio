@@ -179,7 +179,7 @@ body {
     margin: 0 auto;
 }
 
-#AZBXBanner:hover{
+#AZBXBanner:hover {
 	transform: none;
 }
 
@@ -204,21 +204,39 @@ img:hover {
 	transform: scale(1.1);
 }
 
-img{
+img {
 	transition: all 1s ease-out;
 	margin: 50px;
 	filter: drop-shadow(5px 5px 5px #000);
     -webkit-filter: drop-shadow(5px 5px 5px #000);
 }
 
-iframe{
+iframe {
 	filter: drop-shadow(5px 5px 5px #000);
     -webkit-filter: drop-shadow(5px 5px 5px #000);
 }
 
-#RayWave{
+#RayWave {
 	margin: 50px;
  }
+
+ #myWork {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust alignment as needed */
+    align-items: flex-start;
+	max-width: 1200px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes bottom margin/gap */
+}
+
+#logo {
+	margin: 0 auto;
+}
 
 @keyframes fadeInAnimation {
     0% {
