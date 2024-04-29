@@ -8,6 +8,14 @@
 		<!--link rel="shortcut icon" href="favicon.ico" type="image/logo">
         <link rel="icon" href="favicon.ico" type="image/logo"-->
         <link href="styles.css" rel="stylesheet">
+		<script>
+			function scrollToTop() {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'  // This makes the scrolling smooth
+				});
+			}
+			</script>
 	</head>
 
 	<!--audio loop autoplay id="theme">
@@ -76,11 +84,11 @@
 						<br><br>
 						<b><u>Results</b></u>: The video presents an introduction to GIT and its various segments in an engaging and enjoyable manner. As a team, we opted to gamify the video's style to captivate our target audience. The client was delighted with the final product and appreciated the innovative concept.
 						</p>
-
 		</main>	
 		<footer>
 			<p class="special">Martin Elliott Magario</p>
 			<p class="special">Copyright &copy; - All Rights Reserved.</p>
 		</footer>	
+		<button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
 	</body>
 </html>

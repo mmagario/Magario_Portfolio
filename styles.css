@@ -232,6 +232,32 @@ iframe {
 	overflow:hidden;
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #0b0b0bad;
+    color: #D9AB50 ;
+    cursor: pointer;
+	padding: 20px;
+    border-radius: 5px;
+	box-shadow: 5px 5px 5px black;
+    margin: 5px;
+	transition: all 1s ease-out;
+}
+
+#back-to-top:hover {
+    box-shadow: 5px 5px 5px #D9AB50;
+    background-color: #d8d8d850;
+	animation: fadeInAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+	transition: all .5s ease-out;
+}
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
