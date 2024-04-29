@@ -173,6 +173,16 @@ body {
     animation-fill-mode: forwards;
 }
 
+#AZBXBanner {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#AZBXBanner:hover{
+	transform: none;
+}
+
 br {
     line-height: 20px;
 }
@@ -200,15 +210,7 @@ img{
 	margin: 50px
 }
 
-#AZBXBanner {
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
 
-#AZBXBanner:hover{
-	transform: none;
-}
 
 @keyframes fadeInAnimation {
     0% {
