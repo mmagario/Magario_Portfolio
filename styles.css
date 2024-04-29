@@ -63,10 +63,10 @@ nav a {
 nav li:hover {
     box-shadow: 5px 5px 5px #D9AB50;
     background-color: #d8d8d850;
-	animation: fadeInAnimation ease 3s;
+	animation: fadeInAnimation ease .5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-	transition: all 1s ease-out;
+	transition: all .5s ease-out;
 }
 
 #logo {
@@ -74,7 +74,7 @@ nav li:hover {
 	margin: 50px auto -20px auto ;
     filter: drop-shadow(5px 5px 5px #000);
     -webkit-filter: drop-shadow(5px 5px 5px #000);
-	animation: fadeInAnimation ease 3s;
+	animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 	text-shadow: 5px 5px 5px #000;
@@ -82,7 +82,7 @@ nav li:hover {
 }
 
 #logo:hover {
-	transition: all 1s ease-in-out;
+	transition: all .5s ease-in-out;
 	transform: scale(1.1);
 	filter: drop-shadow(5px 5px 5px #D9AB50);
     -webkit-filter: drop-shadow(5px 5px 5px #D9AB50);
@@ -134,7 +134,7 @@ h4 {
 }
 
 p {
-	max-width: 125ch;
+	max-width: 100ch;
 	margin: 18px auto;
 	text-align: left;
 	font-size: 18px;
@@ -195,7 +195,7 @@ br {
 }
 
 img:hover {
-	transition: all 1s ease-in-out;
+	transition: all .5s ease-in-out;
 	transform: scale(1.1);
 }
 
@@ -212,6 +212,11 @@ img {
 iframe {
 	filter: drop-shadow(5px 5px 5px #000);
     -webkit-filter: drop-shadow(5px 5px 5px #000);
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+	max-width: 1200px;
 }
 
 #RayWave {
