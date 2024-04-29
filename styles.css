@@ -127,10 +127,12 @@ h3 {
 }
 
 h4 {
+	margin: 0 auto;
 	text-align: center;
 	font-size: 24px;
 	color: #fff;
 	text-shadow: 5px 5px 5px #000;
+	max-width: 50ch;
 }
 
 p {
@@ -143,7 +145,7 @@ p {
 
 .special {
 	color: #808080ab;
-	max-width: 125ch;
+	max-width: 70ch;
 	margin: 18px auto;
 	text-align: center;
 	font-size: 18px;
