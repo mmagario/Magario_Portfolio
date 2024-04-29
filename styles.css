@@ -17,14 +17,7 @@ body {
 
 header {
 	padding: 10px;
-	color: #d0dde3;
-	font-size: x-large;
-	text-align: center;
 	width: 100%;
-	margin: 0 auto;
-    background-color: #0b0b0bad;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px black;
 	margin: 0 auto;
 }
 
@@ -77,7 +70,8 @@ nav li:hover {
 }
 
 #logo {
-	margin-top: 40px;
+
+	margin: 50px auto -20px auto ;
     filter: drop-shadow(5px 5px 5px #000);
     -webkit-filter: drop-shadow(5px 5px 5px #000);
 	animation: fadeInAnimation ease 3s;
@@ -210,6 +204,9 @@ img {
 	margin: 50px ;
 	filter: drop-shadow(5px 5px 5px #000);
     -webkit-filter: drop-shadow(5px 5px 5px #000);
+	max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 iframe {
@@ -224,19 +221,9 @@ iframe {
  #myWork {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Adjust alignment as needed */
+    justify-content: space-around;
     align-items: flex-start;
 	max-width: 1200px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Removes bottom margin/gap */
-}
-
-#logo {
-	margin: 0 auto;
 }
 
 @keyframes fadeInAnimation {
