@@ -191,7 +191,6 @@ br {
     display: flex;
     justify-content: center;
     align-items: center;
-	
 }
 
 #myWork {
@@ -207,10 +206,19 @@ img:hover {
 
 img{
 	transition: all 1s ease-out;
-	margin: 50px
+	margin: 50px;
+	filter: drop-shadow(5px 5px 5px #000);
+    -webkit-filter: drop-shadow(5px 5px 5px #000);
 }
 
+iframe{
+	filter: drop-shadow(5px 5px 5px #000);
+    -webkit-filter: drop-shadow(5px 5px 5px #000);
+}
 
+#RayWave{
+	margin: 50px;
+ }
 
 @keyframes fadeInAnimation {
     0% {
