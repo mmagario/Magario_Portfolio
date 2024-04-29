@@ -207,7 +207,7 @@ img:hover {
 
 img {
 	transition: all 1s ease-out;
-	margin: 50px;
+	margin: 50px auto;
 	filter: drop-shadow(5px 5px 5px #000);
     -webkit-filter: drop-shadow(5px 5px 5px #000);
 }
