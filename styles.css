@@ -10,7 +10,7 @@ body {
     background-color: #bebebe;
 	width: 100%;
 	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), 
-	url('assets/background.jpg');
+	url(assets/background.jpg);
  	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
