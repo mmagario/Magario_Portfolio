@@ -206,7 +206,7 @@ img {
     -webkit-filter: drop-shadow(10px 10px 10px #000000a1);
 	max-width: 90%;
     height: auto;
-    display: block;
+    display: inline-block;
 }
 
 iframe {
@@ -226,7 +226,7 @@ iframe {
  #myWork {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
 	max-width: 1200px;
 	overflow:hidden;
