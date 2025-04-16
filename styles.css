@@ -1,268 +1,194 @@
-*{
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Verdana, sans-serif;
-	line-height: 1.5;
+/* Modern & Artistic Global Styles for Martin Magario Portfolio */
+
+:root {
+	--accent: #D9AB50;
+	--dark-bg: #0b0b0b;
+	--light: #ffffff;
+	--text: #aaaaaa;
+	--font-main: 'Trebuchet MS', sans-serif;
+  }
+  
+  * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
-}
-
-body {
-	margin: 0 auto;
-	color: #aaaaaa;
-    background-color: #bebebe;
-	width: 100%;
-	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), 
-	url(assets/background.jpg);
- 	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-header {
-	padding: 10px;
-	width: 100%;
-	margin: 0 auto;
-}
-
-main {
-	padding-bottom: 50px;
-	margin-bottom: 50px;
-}
-
-nav {
-    margin: auto;
-    text-align: center;
-    padding: 0px;
-    margin-top: 0px;
-    margin-right: 0px;
-}
-
-nav ul {
-    padding: 0px;
-}
-
-nav li {
-    display: inline;
-    list-style: none;
-    background-color: #0b0b0b;
-    padding: 20px;
-    border-radius: 5px;
-	box-shadow: 10px 10px 10px #000000a1;
-    margin: 5px;
-	transition: all 1s ease-out;
-}
-
-nav a {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold;
-	font-size: 24px;
-    padding: 30px;
-    text-align: center;
-	color: #D9AB50 ;
-}
-
-nav li:hover {
-    box-shadow: 5px 5px 5px #D9AB50;
-    background-color: #555555;
-	animation: fadeInAnimation ease .5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-	transition: all .5s ease-out;
-}
-
-#logo {
-
-	margin: 50px auto -20px auto ;
-    filter: drop-shadow(10px 10px 10px #000000a1);
-    -webkit-filter: drop-shadow(10px 10px 10px #000000a1);
-	animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-	text-shadow: 10px 10px 10px #000000a1;
-	transition: all 1s ease-out;
-}
-
-#logo:hover {
-	transition: all .5s ease-in-out;
-	transform: scale(1.1);
-	filter: drop-shadow(5px 5px 5px #D9AB50);
-    -webkit-filter: drop-shadow(5px 5px 5px #D9AB50);
-}
-
-h2 {
-	text-align: center;
-	font-size: 36px;
-	color: #D9AB5f;
-	overflow: hidden;
-	text-align: center;
-}
-
-h2:before, h2:after {
-    background-color: #0b0b0b;
-	content: "";
-	display: inline-block;
-	height: 5px;
-	position: relative;
-	vertical-align: middle;
-	width: 40%;
-	box-shadow: 5px 5px 5px black;
-	border-radius: 2.5px;
-}
-
-h2:before {
-	right: 0.75em;
-	margin-left: -50%;
-}
-
-h2:after {
-	left: 0.75em;
-	margin-right: -50%;
-}
-
-h3 {
-	text-align: center;
-	font-size: 24px;
-	color: #D9AB5f;
-}
-
-h4 {
-	margin: 0 auto;
-	text-align: center;
-	font-size: 24px;
-	color: #aaaaaa;
-	max-width: 50ch;
-}
-
-p {
-	color: #aaaaaa;
-	max-width: 70ch;
-	margin: 18px auto;
-	text-align: left;
-	font-size: 18px;
-	
-}
-
-.special {
-	color: #555555ab;
-	max-width: 70ch;
-	margin: 18px auto;
-	text-align: center;
-	font-size: 18px;
-}
-
-a {
-    color: #D9AB50;
-}
-
-footer {
-	padding: 5px;
-	text-align: center;
-	width: 25%;
-	margin: 0 auto;
-	margin-top: 20px;
-}
-
-body {
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-#AZBXBanner {
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-#AZBXBanner:hover {
-	transform: none;
-}
-
-br {
-    line-height: 20px;
-}
-
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#myWork {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-}
-
-img:hover {
-	transition: all .5s ease-in-out;
-	transform: scale(1.1);
-}
-
-img {
-	transition: all 1s ease-out;
-	margin: 50px ;
-	filter: drop-shadow(10px 10px 10px #000000a1);
-    -webkit-filter: drop-shadow(10px 10px 10px #000000a1);
-	max-width: 90%;
-    height: auto;
-    display: inline-block;
-}
-
-iframe {
-	filter: drop-shadow(10px 10px 10px #000000a1);
-    -webkit-filter: drop-shadow(10px 10px 10px #000000a1);
+	font-family: var(--font-main);
+  }
+  
+  body {
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+	  url('Assets/background.jpg') center/cover no-repeat fixed;
+	color: var(--text);
+	line-height: 1.6;
+	animation: fadeIn 1s ease forwards;
+	min-height: 100vh;
+  }
+  
+  header {
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-	max-width: 1200px;
-}
-
-#RayWave {
-	margin: 50px;
- }
-
- #myWork {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-	max-width: 1200px;
-	overflow:hidden;
-}
-
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: #0b0b0b;
-    color: #D9AB50 ;
-    cursor: pointer;
-	padding: 20px;
-    border-radius: 5px;
-	box-shadow: 5px 5px 5px black;
-    margin: 5px;
-	transition: all 1s ease-out;
-}
-
-#back-to-top:hover {
-    box-shadow: 5px 5px 5px #D9AB50;
-    background-color: #555555;
-	animation: fadeInAnimation ease .5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-	transition: all .5s ease-out;
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
+	justify-content: center;
+	padding: 2rem 1rem;
+  }
+  
+  #logo {
+	height: auto;
+	width: 250px;
+	filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+	transition: transform 0.3s ease;
+  }
+  
+  #logo:hover {
+	transform: scale(1.05);
+	filter: drop-shadow(0 0 10px var(--accent));
+  }
+  
+  nav {
+	text-align: center;
+	padding: 0 1rem 1rem;
+	background-color: rgba(11, 11, 11, 0.9);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  
+  nav h3 {
+	color: var(--accent);
+	margin-bottom: 0.5rem;
+  }
+  
+  .nav {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+  }
+  
+  .nav li a {
+	color: var(--accent);
+	text-decoration: none;
+	font-size: 1.2rem;
+	padding: 0.75rem 1.25rem;
+	border-radius: 6px;
+	transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .nav li a:hover {
+	background-color: #333;
+	box-shadow: 0 0 10px var(--accent);
+  }
+  
+  .hero {
+	text-align: center;
+	padding: 5rem 2rem 3rem;
+	color: var(--accent);
+  }
+  
+  .hero h1 {
+	font-size: 3rem;
+  }
+  
+  .hero h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--text);
+	margin-top: 0.5rem;
+  }
+  
+  .section-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	margin: 3rem auto;
+	max-width: 1100px;
+	padding: 0 1rem;
+  }
+  
+  .section-card {
+	text-align: center;
+	width: 300px;
+	border-radius: 12px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.03);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .section-card img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-bottom: 2px solid var(--accent);
+  }
+  
+  .section-card h3 {
+	margin: 1rem 0 0.5rem;
+	color: var(--accent);
+	font-size: 1.4rem;
+  }
+  
+  .section-card p {
+	color: var(--text);
+	font-size: 1rem;
+	margin: 0 1rem 1.5rem;
+  }
+  
+  .section-card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  }
+  
+  footer {
+	text-align: center;
+	padding: 2rem 1rem;
+	color: #888;
+	font-size: 0.9rem;
+  }
+  
+  .special {
+	color: #555555ab;
+	margin: 0.5rem auto;
+  }
+  
+  #myWork {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 2rem;
+	padding: 0 1rem;
+  }
+  
+  .gallery-item {
+	text-align: center;
+	transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .gallery-item img,
+  .gallery-item video {
+	max-width: 100%;
+	border-radius: 8px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-item img:hover,
+  .gallery-item video:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+  
+  .gallery-item p {
+	margin-top: 0.75rem;
+	color: var(--accent);
+	font-weight: bold;
+	font-size: 1rem;
+  }
+  
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+  }
+  
