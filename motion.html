@@ -5,36 +5,6 @@
     <title>Motion Graphics | Martin Magario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
-    <style>
-      #myWork {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-        padding: 2rem;
-      }
-      .video-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 600px;
-      }
-      .video-container video {
-        width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        transition: transform 0.3s ease;
-      }
-      .video-container video:hover {
-        transform: scale(1.03);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-      }
-      .video-container p {
-        margin-top: 10px;
-        color: #D9AB50;
-        font-weight: bold;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -47,14 +17,14 @@
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="large.html">Large Format</a></li>
-        <li><a href="graphics.html">Graphic Design & Illustration</a></li>
+        <li><a href="graphic.html">Graphic Design & Illustration</a></li>
         <li><a href="motion.html">Motion Graphics</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <main>
       <h2>Motion Graphics & Animation</h2>
-      <div id="myWork">
+      <div id="myWork" class="motion-flex">
         <div class="video-container">
           <video src="Assets/012025_GS_FruitChews_Monday_BOGO_TVScreens_Animated_Horizontal_Medium_V2.mp4" autoplay loop muted playsinline></video>
           <p>Fruit Chews Promo</p>
