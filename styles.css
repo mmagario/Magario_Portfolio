@@ -1,10 +1,10 @@
 /* Modern & Artistic Global Styles for Martin Magario Portfolio */
 
 :root {
-	--accent: #D9AB50;
-	--dark-bg: #0b0b0b;
+	--accent: #ff6b81; /* coral-pink accent */
+	--dark-bg: #f3f1ed;
 	--light: #ffffff;
-	--text: #aaaaaa;
+	--text: #3c3c3c;
 	--font-main: 'Trebuchet MS', sans-serif;
   }
   
@@ -16,8 +16,8 @@
   }
   
   body {
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-	  url('Assets/background.jpg') center/cover no-repeat fixed;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.85) 50%, rgba(243,241,237,0.95) 100%),
+	  url('Assets/background.jpg') center top / cover no-repeat fixed;
 	color: var(--text);
 	line-height: 1.6;
 	animation: fadeIn 1s ease forwards;
@@ -33,7 +33,7 @@
   #logo {
 	height: auto;
 	width: 250px;
-	filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+	filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
 	transition: transform 0.3s ease;
   }
   
@@ -45,8 +45,9 @@
   nav {
 	text-align: center;
 	padding: 0 1rem 1rem;
-	background-color: rgba(11, 11, 11, 0.9);
-	box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	border-bottom: 2px solid var(--accent);
   }
   
   nav h3 {
@@ -72,7 +73,7 @@
   }
   
   .nav li a:hover {
-	background-color: #333;
+	background-color: #ffe8ec;
 	box-shadow: 0 0 10px var(--accent);
   }
   
@@ -108,8 +109,9 @@
 	width: 300px;
 	border-radius: 12px;
 	overflow: hidden;
-	background-color: rgba(255, 255, 255, 0.03);
+	background-color: rgba(255, 255, 255, 0.6);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 1px solid #ddd;
   }
   
   .section-card img {
@@ -133,18 +135,18 @@
   
   .section-card:hover {
 	transform: scale(1.05);
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
   
   footer {
 	text-align: center;
 	padding: 2rem 1rem;
-	color: #888;
+	color: #777;
 	font-size: 0.9rem;
   }
   
   .special {
-	color: #555555ab;
+	color: #aaa;
 	margin: 0.5rem auto;
   }
   
@@ -166,14 +168,14 @@
   .gallery-item video {
 	max-width: 100%;
 	border-radius: 8px;
-	box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+	box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .gallery-item img:hover,
   .gallery-item video:hover {
 	transform: scale(1.05);
-	box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+	box-shadow: 0 6px 20px rgba(0,0,0,0.2);
   }
   
   .gallery-item p {
