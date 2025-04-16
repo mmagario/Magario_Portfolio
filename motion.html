@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Motion Graphics | Martin Magario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      #myWork {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        padding: 2rem;
+      }
+      .video-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 600px;
+      }
+      .video-container video {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+      }
+      .video-container video:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      }
+      .video-container p {
+        margin-top: 10px;
+        color: #D9AB50;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img id="logo" src="Assets/Magario_Logo.png" alt="Martin Magario Logo" />
+      </a>
+    </header>
+    <nav>
+      <h3>Martin Magario | Motion Graphics</h3>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="large.html">Large Format</a></li>
+        <li><a href="graphics.html">Graphic Design & Illustration</a></li>
+        <li><a href="motion.html">Motion Graphics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Motion Graphics & Animation</h2>
+      <div id="myWork">
+        <div class="video-container">
+          <video src="Assets/012025_GS_FruitChews_Monday_BOGO_TVScreens_Animated_Horizontal_Medium_V2.mp4" autoplay loop muted playsinline></video>
+          <p>Fruit Chews Promo</p>
+        </div>
+        <div class="video-container">
+          <video src="Assets/012025_JARS_Daily_Live_Resin_Deal_VTV_1080x1920_Medium.mp4" autoplay loop muted playsinline></video>
+          <p>JARS Daily Live Resin Deal</p>
+        </div>
+        <div class="video-container">
+          <video src="Assets/Diminished3rd_V2.mp4" autoplay loop muted playsinline></video>
+          <p>Diminished 3rd Visual</p>
+        </div>
+        <div class="video-container">
+          <video src="Assets/GameUIUX_ Prototype.mp4" autoplay loop muted playsinline></video>
+          <p>Game UI/UX Prototype</p>
+        </div>
+        <div class="video-container">
+          <video src="Assets/Ray&Wave.mp4" autoplay loop muted playsinline></video>
+          <p>Ray & Wave Animation</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="special">Martin Elliott Magario</p>
+      <p class="special">&copy; All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

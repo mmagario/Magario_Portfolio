@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Portfolio - Home</title>
-		<meta name="author" content="Martin Elliott Magario">
-		<meta name="description" content="Home Page"> 
-		<!--link rel="shortcut icon" href="favicon.ico" type="image/logo">
-        <link rel="icon" href="favicon.ico" type="image/logo"-->
-        <link href="styles.css" rel="stylesheet">
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Martin Magario | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+    
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img id="logo" src="Assets/Magario_Logo.png" alt="Martin Magario Logo" />
+      </a>
+    </header>
+    <nav>
+      <h3>Martin Magario | Design & Illustration</h3>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="large.html">Large Format</a></li>
+        <li><a href="graphics.html">Graphic Design & Illustration</a></li>
+        <li><a href="motion.html">Motion Graphics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-	<!--audio loop autoplay id="theme">
-		<source src="assets/Phantasm.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
+    <main>
+      <section class="hero">
+        <h1>Martin Magario</h1>
+        <h2>Multidisciplinary Designer & Visual Storyteller</h2>
+      </section>
 
-	<script>
-		var audio = document.getElementById("theme");
-		audio.volume = .01;
-	</script-->
+      <section class="section-grid">
+        <a class="section-card" href="large.html">
+          <img src="Assets/AZBXHorizontal.jpg" alt="Large Format Design Preview" />
+          <h3>Large Format</h3>
+          <p>High-impact designs for banners, signage, and promotional displays.</p>
+        </a>
+        <a class="section-card" href="graphics.html">
+          <img src="Assets/Sticker1.png" alt="Graphic Design & Illustration Preview" />
+          <h3>Graphic Design & Illustration</h3>
+          <p>Bold visuals, branding, and expressive artwork across print and digital.</p>
+        </a>
+        <a class="section-card" href="motion.html">
+          <img src="Assets/Ray&Wave.mp4" alt="Motion Graphics Preview" />
+          <h3>Motion Graphics</h3>
+          <p>Engaging animations and visual storytelling in motion.</p>
+        </a>
+      </section>
 
-	<body>
-		<body style="background: url('Assets/background.jpg') no-repeat center center fixed; background-size: cover;">
-		<header style="display: flex; justify-content: center; align-items: center;">
-			<a href="work.html" style="display: inline-block; width: 250px; height: 175px;">
-				<img id="logo" src="Assets/Magario_Logo.png" alt="logo" width="250" height="75">
-				<br>
-			</a>
-		</header>
-		<nav>
-		<h3> Martin Magario | Design & Illustration </h3>
-			<ul id="Nav" class="nav">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="work.html">Work</a></li>
-			</ul>
-		</nav>
-		<main>
-			<h2> Home </h2>
-			<h4>I'm Martin Magario, a multidisciplinary designer with a passion for visual storytelling and digital craftsmanship. With a Bachelor of Science in Graphic Information Technology from Arizona State University and an Associate of Applied Science in Digital Arts from Mesa Community College, I bring a unique blend of technical expertise and creativity to every project. <br><br>
-			My work spans graphic design, illustration, web design, and motion graphics—blending artistry with functionality to create compelling visual experiences. Whether it's branding, marketing materials, UI/UX design, or digital illustration, I strive to craft impactful designs that resonate with audiences.
-			Explore my portfolio to see how I turn ideas into engaging visuals. Let's collaborate to bring your creative vision to life.<h4>
-		</main>	
-		<footer>
-			<p class="special">Martin Elliott Magario</p>
-			<p class="special">Copyright &copy; - All Rights Reserved.</p>
-		</footer>	
-	</body>
+      <section>
+        <p style="max-width: 70ch; margin: 3rem auto; color: #aaaaaa; text-align: center; font-size: 1.05rem;">
+          With a Bachelor of Science in Graphic Information Technology from Arizona State University and an AAS in Digital Arts, I create powerful design experiences across media—from vibrant motion graphics to detailed print campaigns. Dive into my portfolio to explore what I bring to each project.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p class="special">Martin Elliott Magario</p>
+      <p class="special">&copy; All Rights Reserved</p>
+    </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
 </html>
