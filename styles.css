@@ -1,11 +1,12 @@
-/* Modern & Artistic Global Styles for Martin Magario Portfolio */
+/* Modern, Sleek & Performance-Optimized Styles for Martin Magario Portfolio */
 
 :root {
-	--accent: #ff6b81; /* coral-pink accent */
-	--dark-bg: #f3f1ed;
+	--accent: #ff6b81;
+	--bg: #f7f6f4;
+	--text: #2e2e2e;
 	--light: #ffffff;
-	--text: #3c3c3c;
 	--font-main: 'Trebuchet MS', sans-serif;
+	--max-width: 1200px;
   }
   
   * {
@@ -16,7 +17,7 @@
   }
   
   body {
-	background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.85) 50%, rgba(243,241,237,0.95) 100%),
+	background: linear-gradient(to bottom, rgba(255,255,255,0.95), var(--bg)),
 	  url('Assets/background.jpg') center top / cover no-repeat fixed;
 	color: var(--text);
 	line-height: 1.6;
@@ -31,28 +32,29 @@
   }
   
   #logo {
+	width: 220px;
 	height: auto;
-	width: 250px;
-	filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+	filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
 	transition: transform 0.3s ease;
   }
   
   #logo:hover {
 	transform: scale(1.05);
-	filter: drop-shadow(0 0 10px var(--accent));
+	filter: drop-shadow(0 0 8px var(--accent));
   }
   
   nav {
 	text-align: center;
-	padding: 0 1rem 1rem;
-	background-color: rgba(255, 255, 255, 0.9);
-	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-	border-bottom: 2px solid var(--accent);
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+	border-bottom: 1px solid #eee;
+	padding: 1rem 0;
   }
   
   nav h3 {
 	color: var(--accent);
 	margin-bottom: 0.5rem;
+	font-weight: normal;
   }
   
   .nav {
@@ -66,32 +68,32 @@
   .nav li a {
 	color: var(--accent);
 	text-decoration: none;
-	font-size: 1.2rem;
-	padding: 0.75rem 1.25rem;
-	border-radius: 6px;
-	transition: background 0.3s, box-shadow 0.3s;
+	font-size: 1.05rem;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	transition: background 0.2s, color 0.2s;
   }
   
   .nav li a:hover {
 	background-color: #ffe8ec;
-	box-shadow: 0 0 10px var(--accent);
+	color: #000;
   }
   
   .hero {
 	text-align: center;
-	padding: 5rem 2rem 3rem;
+	padding: 4rem 1rem 2rem;
 	color: var(--accent);
   }
   
   .hero h1 {
-	font-size: 3rem;
+	font-size: 2.75rem;
+	margin-bottom: 0.5rem;
   }
   
   .hero h2 {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	font-weight: 300;
 	color: var(--text);
-	margin-top: 0.5rem;
   }
   
   .section-grid {
@@ -99,43 +101,42 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 2rem;
-	margin: 3rem auto;
-	max-width: 1100px;
+	margin: 2rem auto;
+	max-width: var(--max-width);
 	padding: 0 1rem;
   }
   
   .section-card {
 	text-align: center;
 	width: 300px;
-	border-radius: 12px;
+	border-radius: 10px;
 	overflow: hidden;
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: var(--light);
+	border: 1px solid #e0e0e0;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	border: 1px solid #ddd;
   }
   
   .section-card img {
 	width: 100%;
 	height: auto;
 	display: block;
-	border-bottom: 2px solid var(--accent);
   }
   
   .section-card h3 {
-	margin: 1rem 0 0.5rem;
+	margin: 1rem 0 0.25rem;
 	color: var(--accent);
-	font-size: 1.4rem;
+	font-size: 1.25rem;
   }
   
   .section-card p {
+	font-size: 0.95rem;
+	padding: 0 1rem 1rem;
 	color: var(--text);
-	font-size: 1rem;
-	margin: 0 1rem 1.5rem;
   }
   
   .section-card:hover {
-	transform: scale(1.05);
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+	transform: scale(1.03);
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
   }
   
   footer {
@@ -143,11 +144,12 @@
 	padding: 2rem 1rem;
 	color: #777;
 	font-size: 0.9rem;
+	background: none;
   }
   
   .special {
-	color: #aaa;
-	margin: 0.5rem auto;
+	margin: 0.3rem auto;
+	color: #999;
   }
   
   #myWork {
@@ -156,41 +158,43 @@
 	justify-content: center;
 	gap: 2rem;
 	margin-top: 2rem;
-	padding: 0 1rem;
+	max-width: var(--max-width);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 1rem 3rem;
   }
   
   .gallery-item {
 	text-align: center;
-	transition: transform 0.3s ease, filter 0.3s ease;
+	flex: 1 1 300px;
+	max-width: 400px;
+	transition: transform 0.3s ease;
   }
   
   .gallery-item img,
   .gallery-item video {
-	max-width: 100%;
+	width: 100%;
+	height: auto;
 	border-radius: 8px;
-	box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .gallery-item img:hover,
   .gallery-item video:hover {
-	transform: scale(1.05);
-	box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+	transform: scale(1.02);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   .gallery-item p {
 	margin-top: 0.75rem;
 	color: var(--accent);
-	font-weight: bold;
 	font-size: 1rem;
+	font-weight: 500;
   }
   
   @keyframes fadeIn {
-	from {
-	  opacity: 0;
-	}
-	to {
-	  opacity: 1;
-	}
+	from { opacity: 0; }
+	to { opacity: 1; }
   }
   
