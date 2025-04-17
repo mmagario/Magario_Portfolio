@@ -47,7 +47,22 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         if (typeof lightbox !== "undefined") {
-          lightbox.option({ resizeDuration: 200, wrapAround: true });
+          lightbox.option({
+            resizeDuration: 200,
+            wrapAround: true,
+            fadeDuration: 300,
+            imageFadeDuration: 300,
+            albumLabel: "Image %1 of %2",
+            disableScrolling: true
+          });
+
+          lightbox.cfg = {
+            fileLoadingImage: 'Assets/lightbox/images/loading.gif',
+            fileCloseImage: 'Assets/lightbox/images/close.png',
+            fileNextImage: 'Assets/lightbox/images/next.png',
+            filePrevImage: 'Assets/lightbox/images/prev.png'
+          };
+
           console.log("Lightbox is loaded ✅");
         } else {
           alert("Lightbox is NOT loading");
