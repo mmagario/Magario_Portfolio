@@ -26,6 +26,14 @@
 	text-align: center;
   }
   
+  main {
+	text-align: center;
+  }
+  
+  main h2 {
+	text-align: center;
+  }
+  
   header {
 	display: flex;
 	justify-content: center;
