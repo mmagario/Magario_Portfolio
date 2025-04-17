@@ -45,14 +45,14 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
     <script>
-      lightbox.option({ resizeDuration: 200, wrapAround: true });
       document.addEventListener("DOMContentLoaded", function () {
-        if (typeof lightbox === "undefined") {
-          alert("Lightbox is NOT loading");
-        } else {
+        if (typeof lightbox !== "undefined") {
+          lightbox.option({ resizeDuration: 200, wrapAround: true });
           console.log("Lightbox is loaded ✅");
+        } else {
+          alert("Lightbox is NOT loading");
         }
       });
     </script>
   </body>
-</html
+</html>
