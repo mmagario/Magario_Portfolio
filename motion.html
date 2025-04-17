@@ -5,6 +5,10 @@
     <title>Motion Graphics | Martin Magario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    />
   </head>
   <body>
     <header>
@@ -18,7 +22,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="motion.html">Motion Graphics</a></li>
         <li><a href="graphic.html">Graphic Design</a></li>
-		<li><a href="illustration.html">Illustration</a></li>
+        <li><a href="illustration.html">Illustration</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -26,23 +30,33 @@
       <h2>Motion Graphics & Animation</h2>
       <div id="myWork" class="motion-flex">
         <div class="video-container">
-          <video src="Assets/012025_GS_FruitChews_Monday_BOGO_TVScreens_Animated_Horizontal_Medium_V2.mp4" autoplay loop muted playsinline></video>
+          <a href="Assets/012025_GS_FruitChews_Monday_BOGO_TVScreens_Animated_Horizontal_Medium_V2.mp4" data-lightbox="videos" data-title="Fruit Chews Promo">
+            <img src="Assets/012025_GS_FruitChews_Thumb.jpg" alt="Fruit Chews Promo Thumbnail" />
+          </a>
           <p>Fruit Chews Promo</p>
         </div>
         <div class="video-container">
-          <video src="Assets/012025_JARS_Daily_Live_Resin_Deal_VTV_1080x1920_Medium.mp4" autoplay loop muted playsinline></video>
+          <a href="Assets/012025_JARS_Daily_Live_Resin_Deal_VTV_1080x1920_Medium.mp4" data-lightbox="videos" data-title="JARS Daily Live Resin Deal">
+            <img src="Assets/012025_JARS_Daily_Resin_Thumb.jpg" alt="JARS Daily Live Resin Deal Thumbnail" />
+          </a>
           <p>JARS Daily Live Resin Deal</p>
         </div>
         <div class="video-container">
-          <video src="Assets/Diminished3rd_V2.mp4" autoplay loop muted playsinline></video>
+          <a href="Assets/Diminished3rd_V2.mp4" data-lightbox="videos" data-title="Diminished 3rd Visual">
+            <img src="Assets/Diminished3rd_Thumb.jpg" alt="Diminished 3rd Visual Thumbnail" />
+          </a>
           <p>Diminished 3rd Visual</p>
         </div>
         <div class="video-container">
-          <video src="Assets/GameUIUX_ Prototype.mp4" autoplay loop muted playsinline></video>
+          <a href="Assets/GameUIUX_ Prototype.mp4" data-lightbox="videos" data-title="Game UI/UX Prototype">
+            <img src="Assets/GameUIUX_Thumb.jpg" alt="Game UI/UX Prototype Thumbnail" />
+          </a>
           <p>Game UI/UX Prototype</p>
         </div>
         <div class="video-container">
-          <video src="Assets/Ray&Wave.mp4" autoplay loop muted playsinline></video>
+          <a href="Assets/Ray&Wave.mp4" data-lightbox="videos" data-title="Ray & Wave Animation">
+            <img src="Assets/RayAndWave_Thumb.jpg" alt="Ray & Wave Animation Thumbnail" />
+          </a>
           <p>Ray & Wave Animation</p>
         </div>
       </div>
@@ -51,5 +65,6 @@
       <p class="special">Martin Elliott Magario</p>
       <p class="special">&copy; All Rights Reserved</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   </body>
 </html>
