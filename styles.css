@@ -49,6 +49,9 @@
   main h2 {
 	text-align: center;
 	animation: fadeInUp 1.4s ease forwards;
+	font-size: 2rem;
+	color: var(--accent);
+	margin: 2rem auto 1rem;
   }
   
   header {
@@ -132,12 +135,6 @@
 	color: var(--text);
   }
   
-  h2 {
-	font-size: 2rem;
-	color: var(--accent);
-	margin: 2rem auto 1rem;
-  }
-  
   .section-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -197,10 +194,10 @@
 	color: #999;
   }
   
+  /* === Updated Work Grid === */
   #myWork {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
 	margin-top: 2rem;
 	max-width: var(--max-width);
@@ -212,8 +209,6 @@
   
   .gallery-item {
 	text-align: center;
-	flex: 1 1 300px;
-	max-width: 400px;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	will-change: transform;
 	animation: fadeInUp 1.7s ease forwards;
@@ -228,16 +223,7 @@
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	will-change: transform;
-  }
-  
-  .gallery-item video {
-	max-width: 100%;
-	width: 100%;
-	height: auto;
-	aspect-ratio: 16 / 9;
-	object-fit: contain;
-	margin: 0 auto;
-	display: block;
+	object-fit: cover;
   }
   
   .gallery-item img:hover,
