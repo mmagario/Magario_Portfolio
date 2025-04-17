@@ -227,8 +227,12 @@
   }
   
   .gallery-item video {
-	max-width: 350px;
+	max-width: 100%;
 	height: auto;
+	aspect-ratio: 16 / 9;
+	max-height: 400px;
+	object-fit: contain;
+	margin: 0 auto;
   }
   
   .gallery-item img:hover,
