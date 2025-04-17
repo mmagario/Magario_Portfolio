@@ -7,6 +7,8 @@
 	--light: #ffffff;
 	--font-main: 'Trebuchet MS', sans-serif;
 	--max-width: 1200px;
+	--hover-bg: #ffe8ec;
+	--hover-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
   
   * {
@@ -44,7 +46,8 @@
 	width: 220px;
 	height: auto;
 	filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
-	transition: transform 0.3s ease;
+	transition: transform 0.3s ease, filter 0.3s ease;
+	will-change: transform;
   }
   
   #logo:hover {
@@ -72,6 +75,11 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 1rem;
+	padding: 0;
+  }
+  
+  .nav li {
+	transition: background 0.3s ease;
   }
   
   .nav li a {
@@ -80,11 +88,11 @@
 	font-size: 1.05rem;
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
-	transition: background 0.2s, color 0.2s;
+	transition: background 0.3s, color 0.3s;
   }
   
   .nav li a:hover {
-	background-color: #ffe8ec;
+	background-color: var(--hover-bg);
 	color: #000;
   }
   
@@ -129,6 +137,7 @@
 	background-color: var(--light);
 	border: 1px solid #e0e0e0;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	will-change: transform;
   }
   
   .section-card img {
@@ -151,7 +160,7 @@
   
   .section-card:hover {
 	transform: scale(1.03);
-	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+	box-shadow: var(--hover-shadow);
   }
   
   footer {
@@ -183,7 +192,8 @@
 	text-align: center;
 	flex: 1 1 300px;
 	max-width: 400px;
-	transition: transform 0.3s ease;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	will-change: transform;
   }
   
   .gallery-item img,
@@ -193,6 +203,7 @@
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	will-change: transform;
   }
   
   .gallery-item img:hover,
