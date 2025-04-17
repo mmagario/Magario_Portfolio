@@ -194,7 +194,7 @@
 	color: #999;
   }
   
-  /* === Updated Work Grid === */
+  /* === Updated Gallery Layout (3-column, consistent height) === */
   #myWork {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -208,6 +208,9 @@
   }
   
   .gallery-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	will-change: transform;
@@ -218,12 +221,12 @@
   .gallery-item video {
 	width: 100%;
 	max-width: 100%;
-	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	will-change: transform;
-	object-fit: cover;
   }
   
   .gallery-item img:hover,
@@ -239,6 +242,20 @@
 	font-weight: 500;
   }
   
+  /* ✅ Custom aspect ratios for specific work */
+  .banner-horizontal img,
+  .banner-horizontal video {
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+  }
+  
+  .poster-vertical img,
+  .poster-vertical video {
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+  }
+  
+  /* Responsive adjustments */
   @media (max-width: 768px) {
 	.gallery-item video {
 	  max-width: 100%;
