@@ -189,7 +189,7 @@
   footer {
 	text-align: center;
 	padding: 2rem 1rem;
-	color: #777;
+	color: #ba9349;
 	font-size: 0.9rem;
 	background: none;
 	animation: fadeInUp 1.6s ease forwards;
@@ -197,7 +197,7 @@
   
   .special {
 	margin: 0.3rem auto;
-	color: #999;
+	color: #ff0000;
   }
   
   /* === Graphic Design Page Grid === */
