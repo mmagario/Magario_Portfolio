@@ -136,6 +136,10 @@
 	font-weight: 300;
 	color: var(--text);
   }
+
+  .hero p {
+	margin-bottom: 1rem;
+  }
   
   .section-grid {
 	display: flex;
