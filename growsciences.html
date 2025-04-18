@@ -1,4 +1,3 @@
-<!-- growsciences.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +8,15 @@
     <link rel="stylesheet" href="Assets/lightbox/css/lightbox.min.css" />
   </head>
   <body>
+    <!-- 🔁 Background Video with Fallback -->
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="Assets/background.mp4" type="video/mp4" />
+      <img src="Assets/background.jpg" alt="Background Image" />
+    </video>
+
+    <!-- 🔳 Light overlay -->
+    <div id="video-overlay"></div>
+
     <header>
       <a href="index.html">
         <img id="logo" src="Assets/Magario_Logo.png" alt="Martin Magario Logo" />
@@ -19,21 +27,56 @@
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="graphic.html">Graphic Design</a></li>
-		<li><a href="illustration.html">Illustration</a></li>
-		<li><a href="motion.html">Motion Graphics</a></li>
+        <li><a href="illustration.html">Illustration</a></li>
+        <li><a href="motion.html">Motion Graphics</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <main>
       <h2>Grow Sciences & WZRD Design</h2>
       <div id="myWork">
-        <div class="gallery-item"><a href="Assets/GS1.jpg" data-lightbox="gs" data-title="Grow Sciences Work 1"><img src="Assets/GS1.jpg" alt="Grow Sciences Work 1" /></a><p>Grow Sciences Work 1</p></div>
-        <div class="gallery-item"><a href="Assets/GS2.jpg" data-lightbox="gs" data-title="Grow Sciences Work 2"><img src="Assets/GS2.jpg" alt="Grow Sciences Work 2" /></a><p>Grow Sciences Work 2</p></div>
-        <div class="gallery-item"><a href="Assets/WZRD.jpg" data-lightbox="gs" data-title="WZRD Poster"><img src="Assets/WZRD.jpg" alt="WZRD Poster" /></a><p>WZRD Poster</p></div>
-        <div class="gallery-item"><a href="Assets/022025_GS_Curaleaf_2for40_Carts&Extracts_HTV_1920x1080.jpg" data-lightbox="gs" data-title="Curaleaf Deal Ad"><img src="Assets/022025_GS_Curaleaf_2for40_Carts&Extracts_HTV_1920x1080.jpg" alt="Curaleaf Deal Ad" /></a><p>Curaleaf Deal Ad</p></div>
-        <div class="gallery-item"><a href="Assets/Prime_Leaf_Bogo_VTV_1080x1920.jpg" data-lightbox="gs" data-title="Prime Leaf BOGO Ad"><img src="Assets/Prime_Leaf_Bogo_VTV_1080x1920.jpg" alt="Prime Leaf BOGO Ad" /></a><p>Prime Leaf BOGO Ad</p></div>
-        <div class="gallery-item"><a href="Assets/012025_HashHoles_3for99_SMPost_1080x1080.jpg" data-lightbox="gs" data-title="Hash Holes Promo 1"><img src="Assets/012025_HashHoles_3for99_SMPost_1080x1080.jpg" alt="Hash Holes Promo 1" /></a><p>Hash Holes Promo 1</p></div>
-        <div class="gallery-item"><a href="Assets/012025_Hash_Hole_Product_Preview_Poster_1080x1080.jpg" data-lightbox="gs" data-title="Hash Holes Promo 2"><img src="Assets/012025_Hash_Hole_Product_Preview_Poster_1080x1080.jpg" alt="Hash Holes Promo 2" /></a><p>Hash Holes Promo 2</p></div>
+        <div class="gallery-item">
+          <a href="Assets/GS1.jpg" data-lightbox="gs" data-title="Grow Sciences Work 1">
+            <img src="Assets/GS1.jpg" alt="Grow Sciences Work 1" />
+          </a>
+          <p>Grow Sciences Work 1</p>
+        </div>
+        <div class="gallery-item">
+          <a href="Assets/GS2.jpg" data-lightbox="gs" data-title="Grow Sciences Work 2">
+            <img src="Assets/GS2.jpg" alt="Grow Sciences Work 2" />
+          </a>
+          <p>Grow Sciences Work 2</p>
+        </div>
+        <div class="gallery-item">
+          <a href="Assets/WZRD.jpg" data-lightbox="gs" data-title="WZRD Poster">
+            <img src="Assets/WZRD.jpg" alt="WZRD Poster" />
+          </a>
+          <p>WZRD Poster</p>
+        </div>
+        <div class="gallery-item">
+          <a href="Assets/022025_GS_Curaleaf_2for40_Carts&Extracts_HTV_1920x1080.jpg" data-lightbox="gs" data-title="Curaleaf Deal Ad">
+            <img src="Assets/022025_GS_Curaleaf_2for40_Carts&Extracts_HTV_1920x1080.jpg" alt="Curaleaf Deal Ad" />
+          </a>
+          <p>Curaleaf Deal Ad</p>
+        </div>
+        <div class="gallery-item">
+          <a href="Assets/Prime_Leaf_Bogo_VTV_1080x1920.jpg" data-lightbox="gs" data-title="Prime Leaf BOGO Ad">
+            <img src="Assets/Prime_Leaf_Bogo_VTV_1080x1920.jpg" alt="Prime Leaf BOGO Ad" />
+          </a>
+          <p>Prime Leaf BOGO Ad</p>
+        </div>
+        <div class="gallery-item">
+          <a href="Assets/012025_HashHoles_3for99_SMPost_1080x1080.jpg" data-lightbox="gs" data-title="Hash Holes Promo 1">
+            <img src="Assets/012025_HashHoles_3for99_SMPost_1080x1080.jpg" alt="Hash Holes Promo 1" />
+          </a>
+          <p>Hash Holes Promo 1</p>
+        </div>
+        <div class="gallery-item">
+          <a href="Assets/012025_Hash_Hole_Product_Preview_Poster_1080x1080.jpg" data-lightbox="gs" data-title="Hash Holes Promo 2">
+            <img src="Assets/012025_Hash_Hole_Product_Preview_Poster_1080x1080.jpg" alt="Hash Holes Promo 2" />
+          </a>
+          <p>Hash Holes Promo 2</p>
+        </div>
       </div>
       <div class="back-link">
         <a href="graphic.html">&#8592; Back to Graphic Design</a>

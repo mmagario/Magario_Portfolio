@@ -5,32 +5,47 @@
     <title>Large Format | Martin Magario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    />
   </head>
   <body>
+    <!-- 🔁 Background Video with Fallback -->
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="Assets/background.mp4" type="video/mp4" />
+      <img src="Assets/background.jpg" alt="Background Image" />
+    </video>
+
+    <!-- 🔳 Light overlay -->
+    <div id="video-overlay"></div>
+
     <header>
       <a href="index.html">
         <img id="logo" src="Assets/Magario_Logo.png" alt="Martin Magario Logo" />
       </a>
     </header>
+
     <nav>
       <h3>Martin Magario | Illustration</h3>
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="graphic.html">Graphic Design</a></li>
-		<li><a href="illustration.html">Illustration</a></li>
-		<li><a href="motion.html">Motion Graphics</a></li>
+        <li><a href="illustration.html">Illustration</a></li>
+        <li><a href="motion.html">Motion Graphics</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
     <main>
       <h2>Illustration</h2>
-      </div>
     </main>
+
     <footer>
       <p class="special">Martin Elliott Magario</p>
       <p class="special">&copy; All Rights Reserved</p>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   </body>
 </html>

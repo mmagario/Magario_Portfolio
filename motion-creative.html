@@ -7,21 +7,32 @@
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- 🔁 Background Video with Fallback -->
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="Assets/background.mp4" type="video/mp4" />
+      <img src="Assets/background.jpg" alt="Background Image" />
+    </video>
+
+    <!-- 🔳 Light overlay -->
+    <div id="video-overlay"></div>
+
     <header>
       <a href="index.html">
         <img id="logo" src="Assets/Magario_Logo.png" alt="Martin Magario Logo" />
       </a>
     </header>
+
     <nav>
       <h3>Martin Magario | Motion Graphics</h3>
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="graphic.html">Graphic Design</a></li>
-		<li><a href="illustration.html">Illustration</a></li>
-		<li><a href="motion.html">Motion Graphics</a></li>
+        <li><a href="illustration.html">Illustration</a></li>
+        <li><a href="motion.html">Motion Graphics</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
     <main>
       <h2>Creative Motion Projects</h2>
       <div id="myWork" class="motion-flex">
@@ -42,6 +53,7 @@
         <a href="motion.html">&#8592; Back to Motion Graphics</a>
       </div>
     </main>
+
     <footer>
       <p class="special">Martin Elliott Magario</p>
       <p class="special">&copy; All Rights Reserved</p>
