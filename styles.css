@@ -392,3 +392,15 @@ body.home .intro-text {
 	margin-top: 1rem;
 	margin-bottom: 1.5rem;
 }
+
+@media (max-width: 768px) {
+	nav {
+		padding: 1rem 1rem 1.25rem; /* slightly more bottom padding */
+		gap: 0.75rem; /* more space between title and links */
+	}
+
+	nav h3 {
+		font-size: 1.1rem;
+		margin-bottom: 0;
+	}
+}
