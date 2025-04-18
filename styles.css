@@ -3,142 +3,146 @@
 :root {
 	--accent: #ba9349;
 	--bg: #d7d7d7;
-	--text: #2e2e2e;
+	--text: #ba9349; /* Yellow for all text */
 	--light: #ffffff;
 	--font-main: 'Trebuchet MS', sans-serif;
 	--max-width: 1200px;
 	--hover-bg: #ba9349;
 	--hover-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  html, body {
+}
+
+html, body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: var(--font-main);
 	width: 100%;
 	overflow-x: hidden;
-  }
-  
-  body {
-	background: linear-gradient(to bottom, rgba(255,255,255,0.95), var(--bg)),
-	  url('Assets/background.jpg') center top / cover no-repeat fixed;
+	text-align: center;
 	color: var(--text);
+}
+
+body {
+	background-image: url('Assets/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
 	line-height: 1.6;
 	animation: fadeInUp 1s ease forwards;
 	min-height: 100vh;
-	text-align: center;
-  }
-  
-  @keyframes fadeInUp {
+	position: relative;
+}
+
+/* Overlay to lighten background */
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: hsla(0, 0%, 100%, 0.9);
+	pointer-events: none;
+	z-index: -1;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
 	from {
-	  opacity: 0;
-	  transform: translateY(20px);
+		opacity: 0;
+		transform: translateY(20px);
 	}
 	to {
-	  opacity: 1;
-	  transform: translateY(0);
+		opacity: 1;
+		transform: translateY(0);
 	}
-  }
-  
-  main {
+}
+
+h1, h2, h3 {
 	text-align: center;
-	animation: fadeInUp 1.2s ease forwards;
-  }
-  
-  main h2 {
-	text-align: center;
-	animation: fadeInUp 1.4s ease forwards;
-	font-size: 2rem;
-	color: var(--accent);
-	margin: 2rem auto 1rem;
-  }
-  
-  header {
+	color: var(--text);
+}
+
+/* === Header === */
+header {
 	display: flex;
 	justify-content: center;
 	padding: 2rem 1rem;
 	animation: fadeInUp 1s ease forwards;
 	width: 100%;
-  }
-  
-  #logo {
+}
+
+#logo {
 	width: 220px;
 	height: auto;
 	filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
 	transition: transform 0.3s ease, filter 0.3s ease;
 	will-change: transform;
-  }
-  
-  #logo:hover {
+}
+
+#logo:hover {
 	transform: scale(1.05);
 	filter: drop-shadow(0 0 8px var(--accent));
-  }
-  
-  nav {
-	text-align: center;
+}
+
+/* === Navigation === */
+nav {
 	background: rgba(255, 255, 255, 0.9);
 	box-shadow: 0 1px 5px rgba(0,0,0,0.05);
 	border-bottom: 1px solid #eee;
 	padding: 1rem 0;
 	animation: fadeInUp 1.1s ease forwards;
 	width: 100%;
-  }
-  
-  nav h3 {
-	color: var(--accent);
+	color: var(--text);
+}
+
+nav h3 {
 	margin-bottom: 0.5rem;
 	font-weight: normal;
-  }
-  
-  .nav {
+}
+
+.nav {
 	list-style: none;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 1rem;
 	padding: 0;
-  }
-  
-  .nav li a {
-	color: var(--accent);
+	margin: 0;
+}
+
+.nav li a {
+	color: var(--text);
 	background-color: transparent;
 	text-decoration: none;
 	font-size: 1.05rem;
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
 	transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .nav li a:hover {
+}
+
+.nav li a:hover {
 	background-color: var(--hover-bg);
 	color: #000;
-  }
-  
-  .hero {
+}
+
+/* === Intro Section === */
+.intro {
+	padding: 2rem 1rem 1rem;
+	animation: fadeInUp 1.2s ease forwards;
+}
+
+.intro-text {
+	max-width: 70ch;
+	margin: 3rem auto;
+	font-size: 1.05rem;
 	text-align: center;
-	padding: 2rem 1rem 2rem;
-	padding-bottom: 1rem;
-	margin-bottom: 0;
-	color: var(--accent);
-  }
-  
-  .hero h1 {
-	font-size: 2rem;
-	margin-top: 0;
-  }
-  
-  .hero h2 {
-	font-size: 1.3rem;
-	font-weight: 300;
 	color: var(--text);
-  }
-  
-  .hero p {
-	margin-bottom: 1rem;
-  }
-  
-  .section-grid {
+}
+
+/* === Section Grid === */
+.section-grid {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -146,9 +150,9 @@
 	margin: 2rem auto;
 	max-width: var(--max-width);
 	padding: 0 1rem;
-  }
-  
-  .section-card {
+}
+
+.section-card {
 	text-align: center;
 	width: 300px;
 	border-radius: 10px;
@@ -158,61 +162,64 @@
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	will-change: transform;
 	animation: fadeInUp 1.5s ease forwards;
-  }
-  
-  .section-card img {
+	color: var(--text);
+}
+
+.section-card img {
 	width: 100%;
 	height: auto;
 	display: block;
-  }
-  
-  .section-card h3 {
+}
+
+.section-card h3 {
 	margin: 1rem 0 0.25rem;
-	color: var(--accent);
 	font-size: 1.25rem;
-  }
-  
-  .section-card p {
+}
+
+.section-card p {
 	font-size: 0.95rem;
 	padding: 0 1rem 1rem;
-	color: var(--text);
-  }
-  
-  .section-card:hover {
+	text-align: center;
+}
+
+/* === Card Hover === */
+.section-card:hover {
 	transform: scale(1.03);
 	box-shadow: var(--hover-shadow);
-  }
-  
-  .section-thumb {
+}
+
+/* === Thumbnails (for Motion Preview) === */
+.section-thumb {
 	width: 100%;
 	aspect-ratio: 1 / 1;
 	overflow: hidden;
 	border-radius: 10px;
-  }
-  
-  .section-thumb video {
+}
+
+.section-thumb video {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	display: block;
-  }
-  
-  footer {
+}
+
+/* === Footer === */
+footer {
 	text-align: center;
 	padding: 2rem 1rem;
-	color: #ba9349;
 	font-size: 0.9rem;
 	background: none;
 	animation: fadeInUp 1.6s ease forwards;
-  }
-  
-  .special {
+	color: var(--text);
+}
+
+.special {
 	margin: 0.3rem auto;
-	color: #ba924980;
-  }
-  
-  /* === Graphic Design Page Grid === */
-  #myWork {
+	color: var(--text);
+}
+
+/* === Gallery Grid (Graphic Design Page) === */
+#myWork {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
@@ -222,9 +229,9 @@
 	margin-right: auto;
 	padding: 0 1rem 3rem;
 	animation: fadeInUp 1.5s ease forwards;
-  }
-  
-  .gallery-item {
+}
+
+.gallery-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -232,9 +239,10 @@
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	will-change: transform;
 	animation: fadeInUp 1.7s ease forwards;
-  }
-  
-  .gallery-item img {
+	color: var(--text);
+}
+
+.gallery-item img {
 	width: 100%;
 	max-width: 100%;
 	aspect-ratio: 1 / 1;
@@ -243,22 +251,21 @@
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	will-change: transform;
-  }
-  
-  .gallery-item img:hover {
+}
+
+.gallery-item img:hover {
 	transform: scale(1.02);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .gallery-item p {
+}
+
+.gallery-item p {
 	margin-top: 0.75rem;
-	color: var(--accent);
 	font-size: 1rem;
 	font-weight: 500;
-  }
-  
-  /* === Motion Graphics Page Video Layout === */
-  .motion-flex {
+}
+
+/* === Motion Graphics Page === */
+.motion-flex {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -266,15 +273,16 @@
 	padding: 2rem 1rem 4rem;
 	max-width: var(--max-width);
 	margin: 0 auto;
-  }
-  
-  .video-container {
+}
+
+.video-container {
 	flex: 1 1 400px;
 	max-width: 500px;
 	text-align: center;
-  }
-  
-  .video-container video {
+	color: var(--text);
+}
+
+.video-container video {
 	width: 100%;
 	max-width: 100%;
 	aspect-ratio: 1 / 1;
@@ -283,25 +291,23 @@
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 	transition: transform 0.3s ease;
 	will-change: transform;
-  }
-  
-  .video-container video:hover {
+}
+
+.video-container video:hover {
 	transform: scale(1.02);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .video-container p {
+}
+
+.video-container p {
 	margin-top: 0.75rem;
-	color: var(--accent);
 	font-size: 1rem;
 	font-weight: 500;
-  }
-  
-  /* Responsive fixes */
-  @media (max-width: 768px) {
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
 	.motion-flex {
-	  flex-direction: column;
-	  align-items: center;
+		flex-direction: column;
+		align-items: center;
 	}
-  }
-  
+}
