@@ -93,20 +93,25 @@ header {
 
 /* === Navigation === */
 nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	background: rgba(255, 255, 255, 0.9);
 	box-shadow: 0 1px 5px rgba(0,0,0,0.05);
 	border: 2px solid var(--accent);
 	border-radius: 6px;
-	padding: 1rem 0;
-	margin: 0 auto 1rem;
+	padding: 0.25rem 1rem 1.5rem; /* Top, sides, bottom */
+	margin: 0 auto 1.5rem;
 	max-width: var(--max-width);
 	animation: fadeInUp 1.1s ease forwards;
 	color: var(--text);
+	gap: 0.4rem; /* Slightly closer spacing between h3 and links */
 }
 
 nav h3 {
-	margin-bottom: 0.5rem;
-	font-weight: bold;
+	margin: 0
+	bold;
 }
 
 .nav {
