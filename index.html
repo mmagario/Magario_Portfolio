@@ -1,121 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Martin Magario | Portfolio
-  </title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <link href="styles.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet"/>
- </head>
- <body class="home">
-  <!-- 🔁 Background Video with Fallback -->
-  <video autoplay="" id="background-video" loop="" muted="" playsinline="">
-   <source src="Assets/background.mp4" type="video/mp4"/>
-   <img alt="Background Image" src="Assets/background.jpg"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martin Magario | Visual Designer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <video autoplay muted loop playsinline id="background-video">
+    <source src="Assets/background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
   </video>
-  <!-- 🔳 Light overlay on top of video -->
-  <div id="video-overlay">
-  </div>
+  <div id="background-overlay"></div>
+
   <header>
-   <a href="index.html">
-    <img alt="Martin Magario Logo" id="logo" src="Assets/Magario_Logo.png"/>
-   </a>
+    <img src="Assets/Magario_Logo.png" alt="Martin Magario Logo" id="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="graphic.html">Graphic Design</a></li>
+        <li><a href="illustration.html">Illustration</a></li>
+        <li><a href="motion.html">Motion Graphics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <nav>
-   <h3>
-    Martin Magario | Home
-   </h3>
-   <ul class="nav">
-    <li>
-     <a href="index.html">
-      Home
-     </a>
-    </li>
-    <li>
-     <a href="graphic.html">
-      Graphic Design
-     </a>
-    </li>
-    <li>
-     <a href="illustration.html">
-      Illustration
-     </a>
-    </li>
-    <li>
-     <a href="motion.html">
-      Motion Graphics
-     </a>
-    </li>
-    <li>
-     <a href="contact.html">
-      Contact
-     </a>
-    </li>
-   </ul>
-  </nav>
+
   <main>
-   <section class="intro">
-    <h1>
-     Martin Magario
-    </h1>
-    <h2>
-     Visual Designer Specializing in Graphic Design, Illustration, and Motion Graphics
-    </h2>
-    <p class="intro-text">
-     With a Bachelor of Science in Graphic Information Technology from Arizona State University
-          and an AAS in Digital Arts, I create powerful design experiences across media—from vibrant
-          motion graphics to detailed print campaigns. Dive into my portfolio to explore what I
-          bring to each project.
-    </p>
-   </section>
-   <section class="section-grid">
-    <a class="section-card" href="graphic.html">
-     <div class="card-image">
-      <img alt="Graphic Design Preview" src="Assets/Sticker1.png"/>
-     </div>
-     <h3>
-      Graphic Design
-     </h3>
-     <p>
-      Bold branding, logo design, and expressive visuals for print, digital, banners, and promotional displays.
-     </p>
-    </a>
-    <a class="section-card" href="illustration.html">
-     <div class="card-image">
-      <img alt="Illustration Preview" src=""/>
-     </div>
-     <h3>
-      Illustration
-     </h3>
-     <p>
-      Distinctive illustrations that bring stories, products, and ideas to life across print, digital, and branded content.
-     </p>
-    </a>
-    <a class="section-card" href="motion.html">
-     <div class="section-thumb">
-      <video autoplay="" loop="" muted="" playsinline="" src="Assets/Diminished3rd_V2.mp4">
-      </video>
-     </div>
-     <h3>
-      Motion Graphics
-     </h3>
-     <p>
-      Dynamic motion graphics that combine animation, typography, and visual storytelling to create impactful digital experiences.
-     </p>
-    </a>
-   </section>
+    <section class="hero">
+      <h1>Martin Magario</h1>
+      <h2>Visual Designer Specializing in Graphic Design, Illustration, and Motion Graphics</h2>
+      <p>
+        With a Bachelor of Science in Graphic Information Technology from Arizona State University and an AAS in Digital Arts, 
+        I create powerful design experiences across media — from vibrant motion graphics to detailed print campaigns. 
+        Dive into my portfolio to explore what I bring to each project.
+      </p>
+    </section>
+
+    <section class="section-links">
+      <a href="graphic.html" class="section-card">
+        <img src="Assets/AZBXHorizontal.jpg" alt="Graphic Design Preview" />
+        <h3>Graphic Design</h3>
+        <p>Bold visuals for print, digital, and branding.</p>
+      </a>
+      <a href="illustration.html" class="section-card">
+        <img src="Assets/illustration-preview.jpg" alt="Illustration Preview" />
+        <h3>Illustration</h3>
+        <p>Distinctive artwork that communicates ideas clearly.</p>
+      </a>
+      <a href="motion.html" class="section-card">
+       <video autoplay loop muted playsinline class="card-media" src="Assets/Diminished3rd_V2.mp4"></video>
+        <h3>Motion Graphics</h3>
+        <p>Story-driven animations for digital storytelling.</p>
+      </a>
+    </section>
   </main>
+
   <footer>
-   <p class="special">
-    Martin Magario
-   </p>
-   <p class="special">
-    © All Rights Reserved
-   </p>
+    <p>© Martin Magario | All Rights Reserved</p>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js">
-  </script>
- </body>
+</body>
 </html>

@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Large Format | Martin Magario</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
-    />
-  </head>
-  <body>
-    <!-- 🔁 Background Video with Fallback -->
-    <video autoplay muted loop playsinline id="background-video">
-      <source src="Assets/background.mp4" type="video/mp4" />
-      <img src="Assets/background.jpg" alt="Background Image" />
-    </video>
 
-    <!-- 🔳 Light overlay -->
-    <div id="video-overlay"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Illustration | Martin Magario</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="lightbox.css" />
+</head>
 
-    <header>
-      <a href="index.html">
-        <img id="logo" src="Assets/Magario_Logo.png" alt="Martin Magario Logo" />
-      </a>
-    </header>
+<body>
+  <video autoplay muted loop playsinline id="background-video">
+    <source src="Assets/background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div id="background-overlay"></div>
 
+  <header>
+    <img src="Assets/Magario_Logo.png" alt="Martin Magario Logo" id="logo" />
     <nav>
-      <h3>Martin Magario | Illustration</h3>
-      <ul class="nav">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="graphic.html">Graphic Design</a></li>
-        <li><a href="illustration.html">Illustration</a></li>
+        <li><a href="illustration.html" class="active">Illustration</a></li>
         <li><a href="motion.html">Motion Graphics</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+  </header>
 
-    <main>
-      <h2>Illustration</h2>
-    </main>
+  <main>
+    <h2>Martin Magario | Illustration</h2>
+    <section class="section-links">
+      <div class="section-card">
+        <img src="Assets/placeholder.png" alt="Coming Soon">
+        <h3>Coming Soon</h3>
+        <p>New illustration work will be added here shortly.</p>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <p class="special">Martin Magario</p>
-      <p class="special">&copy; All Rights Reserved</p>
-    </footer>
+  <footer>
+    <p>© Martin Magario | All Rights Reserved</p>
+  </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-  </body>
+  <script src="lightbox-plus-jquery.js"></script>
+</body>
+
 </html>
