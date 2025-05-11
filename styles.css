@@ -54,7 +54,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #a67900;
+  color: #996600;
   font-weight: bold;
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
@@ -80,7 +80,7 @@ nav a:hover {
 
 .hero h2 {
   font-size: 1.3rem;
-  color: #5c3a00;
+  color: #5c4422;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -89,7 +89,7 @@ nav a:hover {
   max-width: 700px;
   margin: auto;
   font-size: 1rem;
-  color: #3b2e1a;
+  color: #444;
   line-height: 1.6;
 }
 
@@ -110,12 +110,12 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   padding: 2rem 1rem;
-  color: #3b2e1a;
+  color: #666;
 }
 
 .page-context {
   text-align: center;
-  color: #a67900;
+  color: #996600;
   font-weight: bold;
   margin-top: -1rem;
   margin-bottom: 1.5rem;
@@ -148,7 +148,7 @@ main {
 
 .media-block .caption {
   font-size: 0.95rem;
-  color: #5c3a00;
+  color: #5e4200;
   margin: 0;
 }
 
@@ -185,14 +185,14 @@ main {
 
 .card h3 {
   margin: 1rem 0 0.5rem;
-  color: #a67900;
+  color: #8a5a0d;
   font-size: 1.2rem;
 }
 
 .card p {
   margin: 0 1rem 1.5rem;
   font-size: 0.95rem;
-  color: #5c3a00;
+  color: #333;
 }
 
 .card:hover {
@@ -227,13 +227,13 @@ main {
 .section-card h3 {
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
-  color: #a67900;
+  color: #8a5a0d;
 }
 
 .section-card p {
   margin: 0;
   font-size: 0.95rem;
-  color: #5c3a00;
+  color: #333;
 }
 
 .card-media {
@@ -253,7 +253,7 @@ main {
 }
 
 .contact-content a {
-  color: #a67900;
+  color: #8a5a0d;
   font-weight: 600;
   text-decoration: none;
 }
@@ -262,47 +262,30 @@ main {
   text-decoration: underline;
 }
 
-#myWork {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
 
-.gallery-item {
+#myWork > div > p {
+  margin-top: 10px;
   text-align: center;
-}
-
-.gallery-item img {
-  width: 100%;
-  max-width: 700px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.gallery-item p {
-  margin-top: 0.5rem;
   font-size: 1rem;
-  color: #5c3a00;
+  color: #3b2e1a;
 }
 
-section#myWork img {
-  margin-bottom: 10px;
+
+#myWork img,
+#myWork video {
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   height: auto;
-  object-fit: contain;
   display: block;
-  margin: 0 auto 0.5rem auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  margin: 0 auto 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-section#myWork div {
-  margin-bottom: 2rem;
+#myWork p {
   text-align: center;
+  margin-top: -10px;
+  margin-bottom: 50px;
+  font-size: 1rem;
+  color: #2d2d2d;
 }
