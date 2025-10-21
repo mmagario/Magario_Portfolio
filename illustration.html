@@ -16,6 +16,8 @@
   </video>
   <div id="background-overlay"></div>
 
+  <div id="vignette-overlay"></div>
+
   <header>
     <img src="Assets/Magario_Logo.png" alt="Martin Magario Logo" id="logo" />
     <nav>
@@ -30,7 +32,7 @@
   </header>
 
   <main>
-    <h2>Martin Elliott Magario | Illustration</h2>
+    <h2>MEM Design | Illustration</h2>
     <section class="section-links">
       <div class="section-card">
         <img src="Assets/placeholder.png" alt="Coming Soon">
@@ -45,6 +47,22 @@
   </footer>
 
   <script src="lightbox-plus-jquery.js"></script>
+
+  <script>
+  const bg = document.getElementById('background-video'); // or use background-overlay
+  const strength = 30; // how far it moves — tweak to taste
+
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * strength;
+    const y = (e.clientY / window.innerHeight - 0.5) * strength;
+    bg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+  });
+
+  // optional: reset smoothly on mouse leave
+  document.addEventListener('mouseleave', () => {
+    bg.style.transform = `translate(0, 0) scale(1.05)`;
+  });
+</script>
 </body>
 
 </html>

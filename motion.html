@@ -15,6 +15,8 @@
   <!-- 🔳 Light overlay -->
   <div id="background-overlay"></div>
 
+  <div id="vignette-overlay"></div>
+
   <header>
    <img alt="Martin Magario Logo" id="logo" src="Assets/Magario_Logo.png"/>
    <nav>
@@ -29,7 +31,7 @@
   </header>
 
   <main>
-   <h2>Martin Elliott Magario | Motion Graphics</h2>
+   <h2>MEM Design | Motion Graphics</h2>
    <section class="section-links">
     <a class="section-card" href="motion-creative.html">
      <video autoplay loop muted playsinline class="card-media" src="Assets/Diminished3rd_V2.mp4"></video>
@@ -47,5 +49,20 @@
   <footer>
    <p>© MEM Design | Martin Elliott Magario. All Rights Reserved</p>
   </footer>
+  <script>
+  const bg = document.getElementById('background-video'); // or use background-overlay
+  const strength = 30; // how far it moves — tweak to taste
+
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * strength;
+    const y = (e.clientY / window.innerHeight - 0.5) * strength;
+    bg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+  });
+
+  // optional: reset smoothly on mouse leave
+  document.addEventListener('mouseleave', () => {
+    bg.style.transform = `translate(0, 0) scale(1.05)`;
+  });
+</script>
  </body>
 </html>

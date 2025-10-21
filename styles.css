@@ -53,40 +53,38 @@ nav ul {
 }
 
 nav a {
-  /* box vars */
   --thickness: 5px;
   --color: #000;
-  --hx: 0%;                       /* horizontal length (animated) */
-  --vy: 0%;                       /* vertical length (animated) */
+  --hx: 0%;
+  --vy: 0%;
 
   position: relative;
   display: inline-block;
   text-decoration: none;
   color: #000;
-  font-weight: bold;
-  font-size: 1.25rem;
+  font-weight: 700;
+  font-size: 1.125rem; /* was 1.25rem */
   padding: 1rem 1rem;
+  padding-top: 10px;
   border-radius: 0;
-  transition: transform .25s ease;
+  transition: transform 0.25s ease;
 }
 
 nav a::before {
   content: "";
   position: absolute;
-  inset: 0;                       /* overlay exactly on the element box */
+  inset: 0;
   pointer-events: none;
 
-  /* top, bottom, left, right lines with precise corners */
+  /* four strokes: top, bottom, left, right */
   background:
     linear-gradient(var(--color), var(--color)) left   top    / var(--hx) var(--thickness) no-repeat,
     linear-gradient(var(--color), var(--color)) left   calc(100% - var(--thickness)) / var(--hx) var(--thickness) no-repeat,
     linear-gradient(var(--color), var(--color)) left   var(--thickness) / var(--thickness) var(--vy) no-repeat,
     linear-gradient(var(--color), var(--color)) right  var(--thickness) / var(--thickness) var(--vy) no-repeat;
 
-  /* default (hover-out) timing: glow disappears first, then lines retract */
-  transition:
-    box-shadow .25s ease 0s,           /* glow out immediately */
-    background-size .35s ease .15s;    /* lines retract after glow */
+  /* on leave: lines retract slightly after hover ends */
+  transition: background-size 0.35s ease 0.15s;
 }
 
 nav a:hover,
@@ -96,19 +94,16 @@ nav a:focus-visible {
   /* expand to full box */
   --hx: 100%;
   --vy: calc(100% - var(--thickness) * 2);
-  padding-top: 10px;
 }
 
-/* hover-in timing: lines draw first, glow comes in after */
 nav a:hover::before,
 nav a:focus-visible::before {
-  transition:
-    background-size .35s ease 0s,      /* draw lines now */
-    box-shadow .25s ease .35s;         /* glow delayed in */
+  /* hover-in: draw immediately */
+  transition: background-size 0.35s ease 0s;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  nav a { transition: none; }
+  nav a,
   nav a::before { transition: none; }
   nav a:hover,
   nav a:focus-visible { transform: none; }
@@ -121,14 +116,14 @@ nav a:focus-visible::before {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem; /* was 2.5rem */
   margin-top: -3rem;
   margin-bottom: 0.5rem;
   color: #222;
 }
 
 .hero h2 {
-  font-size: 1.3rem;
+  font-size: 1.5rem; /* was 1.3rem */
   color: #000000;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -216,20 +211,20 @@ nav a:focus-visible::before {
 
 .section-card h3 {
   margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem; /* was 1.2rem */
   color: #000000;
 }
 
 .section-card p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem; /* was 0.95rem */
   color: #000000;
 }
 
 /* ─── FOOTER ───────────────────────────── */
 footer {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.95rem; /* was 0.9rem */
   padding: 2rem 1rem;
   color: #666;
 }
@@ -241,7 +236,7 @@ footer {
   font-weight: bold;
   margin-top: -1rem;
   margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem; /* was 0.95rem */
 }
 
 main {
@@ -308,12 +303,12 @@ main {
 .card h3 {
   margin: 1rem 0 0.5rem;
   color: #000000;
-  font-size: 1.2rem;
+  font-size: 1.25rem; /* was 1.2rem */
 }
 
 .card p {
   margin: 0 1rem 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1rem; /* was 0.95rem */
   color: #000000;
 }
 
@@ -328,7 +323,6 @@ main {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.1rem;
   line-height: 1.8;
 }
 
@@ -356,8 +350,6 @@ main {
   height: auto;
   display: block;
   margin: 0 auto 20px auto;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 #myWork p {
@@ -385,4 +377,98 @@ main {
   filter: saturate(250%) blur(40px);
   transform: translate(-50%, -50%);
   z-index: -2;
+}
+
+/* ─── SOCIAL LINKS (4-stroke box, no glow) ────────── */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.social-link {
+  --thickness: 5px;   /* match to taste (e.g., 5px like nav) */
+  --color: #000;
+  --hx: 0%;
+  --vy: 0%;
+
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  padding-top: 8px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem; /* was 1.5rem */
+  transition: transform 0.25s ease;
+}
+
+.social-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--color), var(--color)) left   top    / var(--hx) var(--thickness) no-repeat,
+    linear-gradient(var(--color), var(--color)) left   calc(100% - var(--thickness)) / var(--hx) var(--thickness) no-repeat,
+    linear-gradient(var(--color), var(--color)) left   var(--thickness) / var(--thickness) var(--vy) no-repeat,
+    linear-gradient(var(--color), var(--color)) right  var(--thickness) / var(--thickness) var(--vy) no-repeat;
+  transition: background-size 0.35s ease 0.15s;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  transform: translateY(-3px);
+  --hx: 100%;
+  --vy: calc(100% - var(--thickness) * 2);
+}
+
+.social-link:hover::before,
+.social-link:focus-visible::before {
+  transition: background-size 0.35s ease 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-link,
+  .social-link::before { transition: none; }
+  .social-link:hover,
+  .social-link:focus-visible { transform: none; }
+}
+
+.social-link,
+.social-link:visited,
+.social-link:hover,
+.social-link:focus,
+.social-link:active {
+  text-decoration: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.social-link:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Vignette overlay above the video & white overlay, below content */
+#vignette-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1; /* video:-3, overlay:-1, vignette:-1 (placed AFTER overlay in DOM so it sits above it) */
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,0) 60%,
+      rgba(0,0,0,.80) 100%
+    );
+  /* Optional: makes it blend a touch nicer on bright areas */
+  mix-blend-mode: multiply;
+}
+
+#background-video {
+  transition: transform 0.5s ease-out;
+  will-change: transform;
 }

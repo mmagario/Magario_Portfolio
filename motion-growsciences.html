@@ -16,6 +16,9 @@
 </video>
 <!-- 🔳 Light overlay -->
 <div id="background-overlay"></div>
+
+<div id="vignette-overlay"></div>
+
 <header>
 <a href="index.html">
 <img alt="Martin Magario Logo" id="logo" src="Assets/Magario_Logo.png"/>
@@ -31,7 +34,7 @@
 </ul>
 </nav>
 <main>
-<h2>Martin Elliott Magario | GrowSciences Motion Graphics</h2>
+<h2>MEM Design | GrowSciences Motion Graphics</h2>
 <section id="myWork"><div><a class="glightbox" data-type="video" href="Assets/012025_JARS_Daily_Live_Resin_Deal_HTV_1080x1920_Medium.mp4">
 <video autoplay="" loop="" muted="" playsinline="">
 <source src="Assets/012025_JARS_Daily_Live_Resin_Deal_HTV_1080x1920_Medium.mp4" type="video/mp4"/>
@@ -69,5 +72,20 @@
 <script>
       const lightbox = GLightbox({ selector: '.glightbox' });
     </script>
+<script>
+  const bg = document.getElementById('background-video'); // or use background-overlay
+  const strength = 30; // how far it moves — tweak to taste
+
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * strength;
+    const y = (e.clientY / window.innerHeight - 0.5) * strength;
+    bg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+  });
+
+  // optional: reset smoothly on mouse leave
+  document.addEventListener('mouseleave', () => {
+    bg.style.transform = `translate(0, 0) scale(1.05)`;
+  });
+</script>
 </body>
 </html>

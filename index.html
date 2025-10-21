@@ -13,6 +13,8 @@
   </video>
   <div id="background-overlay"></div>
 
+  <div id="vignette-overlay"></div>
+
   <header>
     <img src="Assets/Magario_Logo.png" alt="Martin Magario Logo" id="logo" />
     <nav>
@@ -32,7 +34,7 @@
       <h2>Multidisciplinary Designer Specializing in Graphic Design, Illustration, & Motion Graphics</h2>
       <p>
         With a Bachelor of Science in Graphic Information Technology from Arizona State University and an AAS in Digital Arts, 
-        I create powerful design experiences across media — from vibrant motion graphics to detailed print campaigns. 
+        I create powerful design experiences across media; from vibrant motion graphics to detailed print campaigns. 
         Dive into my portfolio to explore what I bring to each project.
       </p>
     </section>
@@ -59,5 +61,21 @@
   <footer>
     <p>© MEM Design | Martin Elliott Magario. All Rights Reserved</p>
   </footer>
+
+  <script>
+  const bg = document.getElementById('background-video'); // or use background-overlay
+  const strength = 30; // how far it moves — tweak to taste
+
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * strength;
+    const y = (e.clientY / window.innerHeight - 0.5) * strength;
+    bg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+  });
+
+  // optional: reset smoothly on mouse leave
+  document.addEventListener('mouseleave', () => {
+    bg.style.transform = `translate(0, 0) scale(1.05)`;
+  });
+</script>
 </body>
 </html>

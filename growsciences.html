@@ -16,6 +16,9 @@
 </video>
 <!-- 🔳 Light overlay -->
 <div id="background-overlay"></div>
+
+<div id="vignette-overlay"></div>
+
 <header><img alt="Martin Magario Logo" id="logo" src="Assets/Magario_Logo.png"/><nav>
 <ul>
 <li><a href="index.html">Home</a></li>
@@ -26,7 +29,7 @@
 </ul>
 </nav></header>
 <main>
-<h2>Martin Elliott Magario | GrowSciences &amp; WZRD</h2>
+<h2>MEM Design | GrowSciences &amp; WZRD</h2>
 <section id="myWork"><div><a data-lightbox="gs" data-title="" href="Assets/HTV_1920x1080.jpg">
 <img alt="" src="Assets/HTV_1920x1080.jpg"/>
 </a><p>Horizontal TV Screen Ad</p></div><div><a data-lightbox="gs" data-title="" href="Assets/VTV_1080x1920.jpg">
@@ -115,5 +118,21 @@
         }
       });
     </script>
+    <script>
+  const bg = document.getElementById('background-video'); // or use background-overlay
+  const strength = 30; // how far it moves — tweak to taste
+
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * strength;
+    const y = (e.clientY / window.innerHeight - 0.5) * strength;
+    bg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+  });
+
+  // optional: reset smoothly on mouse leave
+  document.addEventListener('mouseleave', () => {
+    bg.style.transform = `translate(0, 0) scale(1.05)`;
+  });
+</script>
+
 </body>
 </html>
