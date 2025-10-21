@@ -472,3 +472,64 @@ main {
   transition: transform 0.5s ease-out;
   will-change: transform;
 }
+
+.back-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.back-link {
+  --thickness: 3px;
+  --color: #000;
+  --hx: 0%;
+  --vy: 0%;
+
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  padding-top: 3px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.back-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--color), var(--color)) left   top    / var(--hx) var(--thickness) no-repeat,
+    linear-gradient(var(--color), var(--color)) left   calc(100% - var(--thickness)) / var(--hx) var(--thickness) no-repeat,
+    linear-gradient(var(--color), var(--color)) left   var(--thickness) / var(--thickness) var(--vy) no-repeat,
+    linear-gradient(var(--color), var(--color)) right  var(--thickness) / var(--thickness) var(--vy) no-repeat;
+  transition: background-size 0.35s ease 0.15s;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  transform: translateY(-2px);
+  --hx: 100%;
+  --vy: calc(100% - var(--thickness) * 2);
+}
+
+.back-link:hover::before,
+.back-link:focus-visible::before {
+  transition: background-size 0.35s ease 0s;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: #000 !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+html { scroll-behavior: smooth; }
